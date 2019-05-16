@@ -1,13 +1,20 @@
-# **************************************************************************** #
-#                                                                              #
-#                                                         :::      ::::::::    #
-#    makefile                                           :+:      :+:    :+:    #
-#                                                     +:+ +:+         +:+      #
-#    By: event <marvin@42.fr>                       +#+  +:+       +#+         #
-#                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2019/05/15 14:58:12 by event             #+#    #+#              #
-#    Updated: 2019/05/15 15:06:22 by event            ###   ########.fr        #
-#                                                                              #
-# **************************************************************************** #
+NAME = libft.a
 
+FILES = ft_isascii.c \
+		ft_isprint.c \
+		ft_strlen.c \
+		ft_toupper.c \
+		ft_isdigit.c \
+		ft_strdup.c	\
+		ft_tolower.c \
+		ft_isalnum.c
 
+all:
+	gcc -c -Wall -Werror -Wextra $(FILES)
+	ar -rc $(NAME) *.o
+	ranlib $(NAME)
+clean:
+	rm -f *.o
+fclean: clean
+	rm -f libft.a
+re: fclean all

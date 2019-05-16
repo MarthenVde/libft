@@ -4,5 +4,7 @@
 
 int main(void)
 {
+	char *test = "hello there";
+	printf("%i", ft_strlen(test));
 	return(0);
 }
