@@ -4,16 +4,11 @@
 
 int main(void)
 {
-	char case1, case2, case3, case4;
+	char *s1, *s2;
+	s1 = "";
+	s2 = "";
 
-	case1 = 'a';
-	case2 = '}';
-	case3 = 'Z';
-	case4 = 'A';
-
-	printf("%c, is : %i\n", case1, ft_isalpha(case1));
-	printf("%c, is : %i\n", case2, ft_isalpha(case2));
-	printf("%c, is : %i\n", case3, ft_isalpha(case3));
-	printf("%c, is : %i\n", case4, ft_isalpha(case4));
+	printf("%i\n", ft_strcmp(s1, s2));
+	printf("%i", strcmp(s1, s2));
 	return(0);
 }
