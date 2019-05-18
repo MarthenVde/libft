@@ -5,10 +5,10 @@
 int main(void)
 {
 	char *s1, *s2;
-	s1 = "";
-	s2 = "";
+	s1 = "wwwwA";
+	s2 = "wAwwW";
 
-	printf("%i\n", ft_strcmp(s1, s2));
-	printf("%i", strcmp(s1, s2));
+	printf("%i\n", ft_strncmp(s1, s2, 2));
+	printf("%i", strncmp(s1, s2, 3));
 	return(0);
 }

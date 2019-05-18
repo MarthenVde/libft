@@ -10,7 +10,8 @@ FILES = ft_isascii.c \
 		ft_isalpha.c \
 		ft_isalnum.c \
 		ft_atoi.c \
-		ft_strcmp.c
+		ft_strcmp.c \
+		ft_strncmp.c
 
 all:
 	gcc -c -Wall -Werror -Wextra $(FILES)
