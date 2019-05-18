@@ -8,9 +8,13 @@ int	ft_atoi(const char *str)
 	ret = 0;
 	isNeg = 1;
 
-	if (*str == '-')
+	while (*str == ' ' || *str == '\t')
+		str++;
+
+	if (*str == '-' || *str == '+')
 	{
-		isNeg = -1;
+		if (*str == '-')
+			isNeg = -1;
 		str++;
 	}
 	while (ft_isdigit(*str))
