@@ -13,7 +13,8 @@ FILES = ft_isascii.c \
 		ft_strcmp.c \
 		ft_strncmp.c \
 		ft_strstr.c  \
-		ft_strnstr.c
+		ft_strnstr.c \
+		ft_memset.c
 
 all:
 	gcc -c -Wall -Werror -Wextra $(FILES)

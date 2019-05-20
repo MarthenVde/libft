@@ -4,16 +4,10 @@
 
 int main(void)
 {
-	char *s1, *s2;
-	s1 = "Foo Bar Baz";
-	s2 = "Foo";
+	void *a;
 
-
-	char *ptr = ft_strnstr(s1, s2, 3);
-	char *ptr2 = strnstr(s1, s2, 3);
-
-
-	printf("%s\n", ptr);
-	printf("%s\n", ptr2);
+	memset(a, 'f', 12);
+  
+    printf("After memset():  %s", (char *)a); 
 	return(0);
 }
