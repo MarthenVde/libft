@@ -11,7 +11,9 @@ FILES = ft_isascii.c \
 		ft_isalnum.c \
 		ft_atoi.c \
 		ft_strcmp.c \
-		ft_strncmp.c
+		ft_strncmp.c \
+		ft_strstr.c  \
+		ft_strnstr.c
 
 all:
 	gcc -c -Wall -Werror -Wextra $(FILES)

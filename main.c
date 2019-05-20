@@ -5,10 +5,15 @@
 int main(void)
 {
 	char *s1, *s2;
-	s1 = "wwwwA";
-	s2 = "wAwwW";
+	s1 = "Foo Bar Baz";
+	s2 = "Foo";
 
-	printf("%i\n", ft_strncmp(s1, s2, 2));
-	printf("%i", strncmp(s1, s2, 3));
+
+	char *ptr = ft_strnstr(s1, s2, 3);
+	char *ptr2 = strnstr(s1, s2, 3);
+
+
+	printf("%s\n", ptr);
+	printf("%s\n", ptr2);
 	return(0);
 }
