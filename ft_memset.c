@@ -2,22 +2,15 @@
 
 void	*ft_memset(void *b, int c, size_t len)
 {
-	size_t count;
-
-	count = 0;
+	size_t i;
 	char *str;
-	str = (char *)malloc(sizeof(c) * len + 1);
 
-	if (str == NULL)
-		return (NULL);
-
-	while (count <= len)
+	i = 0;
+	str = b;
+	while (i < len)
 	{
-		str[count] = c;
-		count++;
+		str[i++] = c;
 	}
-	str[count] = '\0';
-
-	b = str;
+	str[i] = '\0';
 	return  (b);
 }
