@@ -27,7 +27,10 @@ FILES = ft_isascii.c \
 		ft_strnstr.c \
 		ft_memset.c \
 		ft_memalloc.c \
-		ft_memdel.c
+		ft_memdel.c \
+		ft_strnew.c \
+		ft_strdel.c \
+		ft_strclr.c
 
 all:
 	gcc -c -Wall -Werror -Wextra $(FILES)
