@@ -1,20 +1,30 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: marvan-d <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2019/05/21 12:00:49 by marvan-d          #+#    #+#             */
+/*   Updated: 2019/05/21 12:00:52 by marvan-d         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
 int	ft_atoi(const char *str)
 {
 	int ret;
-	int isNeg;
+	int is_neg;
 
 	ret = 0;
-	isNeg = 1;
-
+	is_neg = 1;
 	while (*str == ' ' || *str == '\t')
 		str++;
-
 	if (*str == '-' || *str == '+')
 	{
 		if (*str == '-')
-			isNeg = -1;
+			is_neg = -1;
 		str++;
 	}
 	while (ft_isdigit(*str))
@@ -23,5 +33,5 @@ int	ft_atoi(const char *str)
 		ret += (*str - '0');
 		str++;
 	}
-	return (ret * isNeg);
+	return (ret * is_neg);
 }

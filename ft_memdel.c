@@ -1,28 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*   ft_memdel.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: marvan-d <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/21 11:58:34 by marvan-d          #+#    #+#             */
-/*   Updated: 2019/05/21 11:58:37 by marvan-d         ###   ########.fr       */
+/*   Created: 2019/05/21 13:33:22 by marvan-d          #+#    #+#             */
+/*   Updated: 2019/05/21 13:33:23 by marvan-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memset(void *b, int c, size_t len)
+void	ft_memdel(void **ap)
 {
-	size_t	i;
-	char	*str;
-
-	i = 0;
-	str = b;
-	while (i < len)
-	{
-		str[i++] = c;
-	}
-	str[i] = '\0';
-	return (b);
+	free(ap);
+	ap = NULL;
 }

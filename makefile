@@ -1,3 +1,14 @@
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    makefile                                           :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: marvan-d <marvin@42.fr>                    +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2019/05/21 12:00:36 by marvan-d          #+#    #+#              #
+#    Updated: 2019/05/21 12:00:40 by marvan-d         ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
 NAME = libft.a
 
 FILES = ft_isascii.c \
@@ -14,7 +25,9 @@ FILES = ft_isascii.c \
 		ft_strncmp.c \
 		ft_strstr.c  \
 		ft_strnstr.c \
-		ft_memset.c
+		ft_memset.c \
+		ft_memalloc.c \
+		ft_memdel.c
 
 all:
 	gcc -c -Wall -Werror -Wextra $(FILES)
