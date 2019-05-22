@@ -32,9 +32,16 @@ FILES = ft_isascii.c \
 		ft_strdel.c \
 		ft_strclr.c \
 		ft_striter.c \
-		ft_striteri.c
+		ft_striteri.c \
+		ft_strmap.c \
+		ft_strmapi.c \
+		ft_putnbr.c \
+		ft_putchar.c \
+		ft_putstr.c
 
-all:
+all: a.out $(NAME)
+
+$(NAME): $(FILES)
 	gcc -c -Wall -Werror -Wextra $(FILES)
 	ar -rc $(NAME) *.o
 	ranlib $(NAME)
@@ -43,3 +50,6 @@ clean:
 fclean: clean
 	rm -f libft.a
 re: fclean all
+
+a.out: main.c libft.a
+	gcc main.c libft.a

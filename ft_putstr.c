@@ -1,33 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strstr.c                                        :+:      :+:    :+:   */
+/*   ft_putstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: marvan-d <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/21 11:59:25 by marvan-d          #+#    #+#             */
-/*   Updated: 2019/05/21 11:59:28 by marvan-d         ###   ########.fr       */
+/*   Created: 2019/05/22 12:57:09 by marvan-d          #+#    #+#             */
+/*   Updated: 2019/05/22 12:57:10 by marvan-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strstr(const char *haystack, const char *needle)
+void	ft_putstr(char const *s)
 {
-	size_t i;
-
-	if (needle[0] == '\0')
-		return ((char *)haystack);
-	while (*haystack != '\0')
+	while (*s != '\0')
 	{
-		i = 0;
-		while (haystack[i] == needle[i])
-		{
-			if (needle[i + 1] == '\0')
-				return ((char *)haystack);
-			i++;
-		}
-		haystack++;
+		ft_putchar(*s);
+		s++;
 	}
-	return (NULL);
 }

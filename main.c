@@ -14,17 +14,19 @@
 #include <ctype.h>
 #include "libft.h"
 
-void	func(unsigned int i, char *str)
+char	func(unsigned int i, char c)
 {
-	str[i] = 'f';
+	c = 'f';
+	return (c);
 }
 
-int	main(void)
+int		main(void)
 {
-	char str[] = "hello";
-	void	(*f)(unsigned int, char *);
+	char (*f)(unsigned int, char);
 	f = &func;
-	ft_striteri(str, f);
-	printf("%s\n", str);
+	char *s1 = "hello";
+	char *s2 = ft_strmapi(s1, f);
+	ft_putstr(s2);
+	printf("\n");
 	return (0);
 }
