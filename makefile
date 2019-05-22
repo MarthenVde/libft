@@ -30,7 +30,9 @@ FILES = ft_isascii.c \
 		ft_memdel.c \
 		ft_strnew.c \
 		ft_strdel.c \
-		ft_strclr.c
+		ft_strclr.c \
+		ft_striter.c \
+		ft_striteri.c
 
 all:
 	gcc -c -Wall -Werror -Wextra $(FILES)
