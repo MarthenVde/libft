@@ -1,22 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_putendl.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: marvan-d <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/21 12:29:21 by marvan-d          #+#    #+#             */
-/*   Updated: 2019/05/21 12:29:45 by marvan-d         ###   ########.fr       */
+/*   Created: 2019/05/22 14:45:00 by marvan-d          #+#    #+#             */
+/*   Updated: 2019/05/22 14:45:01 by marvan-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <ctype.h>
 #include "libft.h"
 
-int		main(void)
+void	ft_putendl(char const *s)
 {
-	char *s = "hello";
-	ft_putendl(s);
-	return (0);
+	while (*s != '\0')
+	{
+		ft_putchar(*s);
+		s++;
+	}
+	ft_putchar('\n');
 }

@@ -1,22 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_putchar_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: marvan-d <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/21 12:29:21 by marvan-d          #+#    #+#             */
-/*   Updated: 2019/05/21 12:29:45 by marvan-d         ###   ########.fr       */
+/*   Created: 2019/05/22 13:59:21 by marvan-d          #+#    #+#             */
+/*   Updated: 2019/05/22 13:59:23 by marvan-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <ctype.h>
 #include "libft.h"
 
-int		main(void)
+void	ft_putchar_fd(char c, int fd)
 {
-	char *s = "hello";
-	ft_putendl(s);
-	return (0);
+	write(fd, &c, 1);
 }

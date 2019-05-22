@@ -1,22 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: marvan-d <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/21 12:29:21 by marvan-d          #+#    #+#             */
-/*   Updated: 2019/05/21 12:29:45 by marvan-d         ###   ########.fr       */
+/*   Created: 2019/05/22 14:38:40 by marvan-d          #+#    #+#             */
+/*   Updated: 2019/05/22 14:38:41 by marvan-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <ctype.h>
 #include "libft.h"
 
-int		main(void)
+void	ft_putnbr_fd(int n, int fd)
 {
-	char *s = "hello";
-	ft_putendl(s);
-	return (0);
+	if (n < 0)
+	{
+		ft_putchar_fd('-', fd);
+		n *= -1;
+	}
+	if (n >= 10)
+	{
+		ft_putnbr_fd((n / 10), fd);
+		ft_putchar_fd((n % 10 + '0'), fd);
+	}
+	else
+		ft_putchar_fd((n + '0'), fd);
 }
