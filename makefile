@@ -44,7 +44,9 @@ FILES = ft_isascii.c \
 		ft_putnbr_fd.c \
 		ft_putendl.c \
 		ft_memcpy.c \
-		ft_memccpy.c
+		ft_memccpy.c \
+		ft_strequ.c \
+		ft_strnequ.c
 
 
 all: a.out $(NAME)

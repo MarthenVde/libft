@@ -1,24 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_strnequ.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: marvan-d <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/21 12:29:21 by marvan-d          #+#    #+#             */
-/*   Updated: 2019/05/21 12:29:45 by marvan-d         ###   ########.fr       */
+/*   Created: 2019/05/23 15:09:29 by marvan-d          #+#    #+#             */
+/*   Updated: 2019/05/23 15:09:30 by marvan-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <ctype.h>
 #include "libft.h"
 
-int		main(void)
+int	ft_strnequ(char const *s1, char const *s2, size_t n)
 {
-	char s1[20] = "aaa";
-	char s2[20] = "aaa";
+	size_t i;
 
-	ft_putnbr(ft_strnequ(s1, s2, 3));
-	return (0);
+	i = 0;
+	while ((s1[i] != '\0' || s2[i] != '\0') && (i < n))
+	{
+		if (s1[i] == s2[i])
+			i++;
+		else
+			return (0);
+	}
+	return (1);
 }
