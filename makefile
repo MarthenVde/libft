@@ -42,7 +42,10 @@ FILES = ft_isascii.c \
 		ft_putstr_fd.c \
 		ft_putendl_fd.c \
 		ft_putnbr_fd.c \
-		ft_putendl.c
+		ft_putendl.c \
+		ft_memcpy.c \
+		ft_memccpy.c
+
 
 all: a.out $(NAME)
 
