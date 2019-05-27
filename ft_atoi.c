@@ -14,15 +14,19 @@
 
 int	ft_atoi(const char *str)
 {
-	int ret;
-	int is_neg;
+	long long int ret;
+	long long is_neg;
 
 	if (str[0] == '\0')
 		return (0);
 
 	ret = 0;
 	is_neg = 1;
+<<<<<<< HEAD
 	while (*str <= 32)
+=======
+	while (*str == 32 || (*str >= 9 && *str <= 13))
+>>>>>>> 935eb44d30eb925466b3be7f77bcf637f7b22337
 		str++;
 	if (*str == '-' || *str == '+')
 	{
@@ -33,7 +37,7 @@ int	ft_atoi(const char *str)
 	while (ft_isdigit(*str))
 	{
 		ret *= 10;
-		ret += (*str - '0');
+		ret += (long long int)(*str - '0');
 		str++;
 	}
 	return (ret * is_neg);
