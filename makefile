@@ -11,7 +11,8 @@
 # **************************************************************************** #
 NAME = libft.a
 
-FILES = ft_isascii.c \
+FILES = ft_bzero.c \
+		ft_isascii.c \
 		ft_isprint.c \
 		ft_strlen.c \
 		ft_toupper.c \
@@ -46,7 +47,8 @@ FILES = ft_isascii.c \
 		ft_memcpy.c \
 		ft_memccpy.c \
 		ft_strequ.c \
-		ft_strnequ.c
+		ft_strnequ.c \
+		ft_memmove.c
 
 
 all: a.out $(NAME)

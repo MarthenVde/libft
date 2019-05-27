@@ -17,9 +17,12 @@ int	ft_atoi(const char *str)
 	int ret;
 	int is_neg;
 
+	if (str[0] == '\0')
+		return (0);
+
 	ret = 0;
 	is_neg = 1;
-	while (*str == ' ' || *str == '\t')
+	while (*str <= 32)
 		str++;
 	if (*str == '-' || *str == '+')
 	{
