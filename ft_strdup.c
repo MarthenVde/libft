@@ -18,7 +18,7 @@ char	*ft_strdup(const char *str)
 	int		count;
 
 	dup = (char *)malloc(sizeof(dup) * ft_strlen(str) + 1);
-	if (dup == NULL)
+	if (!dup)
 		return (NULL);
 	count = 0;
 	while (str[count] != '\0')
