@@ -15,11 +15,10 @@
 int	ft_atoi(const char *str)
 {
 	long long int ret;
-	long long is_neg;
+	long long int is_neg;
 
 	if (str[0] == '\0')
 		return (0);
-
 	ret = 0;
 	is_neg = 1;
 	while (*str == 32 || (*str >= 9 && *str <= 13))

@@ -14,13 +14,13 @@
 
 void	*ft_memmove(void *dst, const void *src, size_t len)
 {
-	if (!dst && !src && len != 0)
-		return (NULL);
-	size_t	i;
-	unsigned char buffer[len + 5];
+	size_t			i;
+	unsigned char	buffer[len + 5];
 	unsigned char	*dst_ptr;
 	unsigned char	*src_ptr;
 
+	if (!dst && !src && len != 0)
+		return (NULL);
 	i = 0;
 	dst_ptr = (unsigned char *)dst;
 	src_ptr = (unsigned char *)src;

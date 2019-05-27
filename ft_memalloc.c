@@ -14,11 +14,19 @@
 
 void	*ft_memalloc(size_t size)
 {
-	void *ret;
+	void			*ret;
+	size_t			i;
+	unsigned char	*ptr;
 
+	i = 0;
 	ret = (void *)malloc(sizeof(ret) * size);
 	if (!ret)
 		return (NULL);
-	ret = 0;
+	ptr = ret;
+	while (i < size)
+	{
+		ptr[i] = '\0';
+		i++;
+	}
 	return (ret);
 }
