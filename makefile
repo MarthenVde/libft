@@ -51,7 +51,13 @@ FILES = ft_bzero.c \
 		ft_memmove.c \
 		ft_memchr.c \
 		ft_memcmp.c \
-		ft_strcpy.c
+		ft_strcpy.c \
+		ft_strncpy.c \
+		ft_strcat.c \
+		ft_strncat.c \
+		ft_strlcat.c \
+		ft_strchr.c \
+		ft_strrchr.c
 
 
 all: a.out $(NAME)

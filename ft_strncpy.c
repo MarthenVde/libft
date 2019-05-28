@@ -1,32 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncmp.c                                       :+:      :+:    :+:   */
+/*   ft_strncpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: marvan-d <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/21 11:59:10 by marvan-d          #+#    #+#             */
-/*   Updated: 2019/05/21 11:59:13 by marvan-d         ###   ########.fr       */
+/*   Created: 2019/05/28 10:17:25 by marvan-d          #+#    #+#             */
+/*   Updated: 2019/05/28 10:17:26 by marvan-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_strncmp(const char *s1, const char *s2, size_t n)
+char	*ft_strncpy(char *dst, const char *src, size_t len)
 {
-	size_t	c;
+	size_t i;
 
-	c = 0;
-	while ((*s1 != '\0' || *s2 != '\0') && (c < n))
+	i = 0;
+	while (src[i] != '\0' && i < len)
 	{
-		if ((unsigned char)*s1 == (unsigned char)*s2)
-		{
-			s1++;
-			s2++;
-		}
-		else
-			return ((unsigned char)*s1 - (unsigned char)*s2);
-		c++;
+		dst[i] = src[i];
+		i++;
 	}
-	return (0);
+	while (i < len)
+	{
+		dst[i] = '\0';
+		i++;
+	}
+	return (dst);
 }
