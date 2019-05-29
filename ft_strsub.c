@@ -1,30 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strmap.c                                        :+:      :+:    :+:   */
+/*   ft_strsub.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: marvan-d <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/22 10:45:24 by marvan-d          #+#    #+#             */
-/*   Updated: 2019/05/22 10:45:25 by marvan-d         ###   ########.fr       */
+/*   Created: 2019/05/29 10:38:07 by marvan-d          #+#    #+#             */
+/*   Updated: 2019/05/29 10:38:08 by marvan-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strmap(char const *s, char (*f)(char))
+char	*ft_strsub(char const *s, unsigned int start, size_t len)
 {
-	char			*ret;
+	char			*sub;
 	unsigned int	i;
 
+	sub = (char *)malloc(sizeof(char) * (len + 1));
 	i = 0;
-	if (!f || !s || !(ret = (char *)malloc(sizeof(char) * ft_strlen(s) + 1)))
+	if (!sub || !s)
 		return (NULL);
-	while (s[i] != '\0')
+	while (i < len)
 	{
-		ret[i] = f(s[i]);
+		sub[i] = s[start + i];
 		i++;
 	}
-	ret[i] = '\0';
-	return (ret);
+	sub[i] = '\0';
+	return(sub);
 }

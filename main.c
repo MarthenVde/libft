@@ -16,11 +16,8 @@
 
 int		main(void)
 {
-	char str[40];
-	ft_strcpy (str,"these ");
-	ft_strcat (str,"strings ");
-	ft_strcat (str,"are ");
-	ft_strcat (str,"concatenated.");
-	printf("%s\n", str);
+	char str[40] = "hello world";
+	char *sub = ft_strsub(str, 6, 5);
+	printf("%s\n", sub);
 	return (0);
 }

@@ -25,7 +25,7 @@ void	*ft_memalloc(size_t size)
 	ptr = ret;
 	while (i < size)
 	{
-		ptr[i] = '\0';
+		ptr[i] = 0;
 		i++;
 	}
 	return (ret);

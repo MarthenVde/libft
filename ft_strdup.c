@@ -17,7 +17,7 @@ char	*ft_strdup(const char *str)
 	char	*dup;
 	int		count;
 
-	dup = (char *)malloc(sizeof(dup) * ft_strlen(str) + 1);
+	dup = (char *)malloc(sizeof(char) * ft_strlen(str) + 1);
 	if (!dup)
 		return (NULL);
 	count = 0;
