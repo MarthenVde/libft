@@ -59,7 +59,9 @@ FILES = ft_bzero.c \
 		ft_strchr.c \
 		ft_strrchr.c \
 		ft_strsub.c \
-		ft_strjoin.c
+		ft_strjoin.c \
+		ft_strtrim.c \
+		ft_itoa.c
 
 
 all: a.out $(NAME)

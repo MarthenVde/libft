@@ -1,27 +1,58 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: marvan-d <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/21 11:58:34 by marvan-d          #+#    #+#             */
-/*   Updated: 2019/05/21 11:58:37 by marvan-d         ###   ########.fr       */
+/*   Created: 2019/05/29 14:30:06 by marvan-d          #+#    #+#             */
+/*   Updated: 2019/05/29 14:30:07 by marvan-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memset(void *b, int c, size_t len)
+static	int	num_len(int n)
 {
-	size_t	i;
-	char	*str;
+	int len;
 
-	i = 0;
-	str = b;
-	while (i < len)
+	len = 0;
+	while (n != 0)
 	{
-		str[i++] = c;
+		n /= 10;
+		len++;
 	}
-	return (b);
+	return (len);
+}
+
+char	*ft_itoa(int n)
+{
+	char *ret;
+	int l;
+	int i;
+
+	l = 0;
+	i = 0;
+	if (n < 0)
+	{
+		l = num_len((n *= - 1)) + 1;
+		if (!(ret = ft_strnew(l)))
+			return (NULL);
+		ret[i] = '-';
+		i++;
+	}
+	else
+	{
+		l = num_len(n);
+		if (!(ret = ft_strnew(l)))
+			return (NULL);
+	}
+	while (i <= l)
+	{
+		n /= 10;
+		ret[i] = (n % 10) + '0';
+		i++; 
+
+	}
+	return (ret);
 }

@@ -16,8 +16,6 @@
 
 int		main(void)
 {
-	char str[40] = "hello world";
-	char *sub = ft_strsub(str, 6, 5);
-	printf("%s\n", sub);
+	char *x = ft_itoa(12);
 	return (0);
 }
