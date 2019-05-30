@@ -17,10 +17,14 @@
 
 int		main(void)
 {
-	char *s1 = "  \t \t \n   \n\n\n\t";
-	char *s2 = "";
-	char *ret = ft_strtrim(s1);
+	char *s = "split  ||this|for|me|||||!|";
+	int i = 0;
+	char **result = ft_strsplit(s, '|');
 
-	printf("%s\n", ret);
+	while (result[i])
+	{
+		printf("%s\n", result[i]);
+		i++;
+	}
 	return (0);
 }
