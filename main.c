@@ -13,9 +13,26 @@
 #include <stdio.h>
 #include <ctype.h>
 #include "libft.h"
+#include <time.h>
 
 int		main(void)
 {
-	char *x = ft_itoa(12);
-	return (0);
+	srand(clock());
+	int n;
+	char *d;
+
+	for (int i = 2000; i >= 0; i--)
+	{
+		n = rand();
+		n *= -1;
+		d = ft_itoa(n);
+		if (atoi(d) != n)
+		{
+			printf("failed input: %i   output:  %s\n",n , d);
+		}
+		else
+		{
+			printf("success input: %i   output:   %s\n",n , d);
+		}
+	}
 }
