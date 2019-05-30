@@ -17,22 +17,10 @@
 
 int		main(void)
 {
-	srand(clock());
-	int n;
-	char *d;
+	char *s1 = "  \t \t \n   \n\n\n\t";
+	char *s2 = "";
+	char *ret = ft_strtrim(s1);
 
-	for (int i = 2000; i >= 0; i--)
-	{
-		n = rand();
-		n *= -1;
-		d = ft_itoa(n);
-		if (atoi(d) != n)
-		{
-			printf("failed input: %i   output:  %s\n",n , d);
-		}
-		else
-		{
-			printf("success input: %i   output:   %s\n",n , d);
-		}
-	}
+	printf("%s\n", ret);
+	return (0);
 }
