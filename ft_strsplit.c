@@ -54,7 +54,7 @@ char	**ft_strsplit(char const *s, char c)
 	int i;
 	int j;
 
-	if (!(arr = (char **)malloc(sizeof(char *) * (words_count(s, c) + 1))))
+	if (!s || !(arr = (char **)malloc(sizeof(char *) * (words_count(s, c) + 1))))
 		return (NULL);
 	i = 0;
 	j = 0;
