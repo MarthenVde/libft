@@ -29,7 +29,7 @@ char	*ft_itoa(int n)
 	int neg;
 
 	neg  = (n < 0);
-	if (n == -2147483648)
+	if (n == INT_MIN)
 		return (ft_strdup("-2147483648"));
 	if (neg)
 		n *= -1;

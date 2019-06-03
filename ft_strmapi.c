@@ -17,7 +17,7 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	char			*ret;
 	unsigned int	i;
 
-	if (!s ||!f || !(ret = (char *)malloc(sizeof(char) * ft_strlen(s) + 1)))
+	if (!s ||!f || !(ret = ft_strnew(ft_strlen(s))))
 		return (NULL);
 	i = 0;
 	while (s[i] != '\0')

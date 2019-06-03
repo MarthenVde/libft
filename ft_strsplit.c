@@ -56,16 +56,15 @@ char	**ft_strsplit(char const *s, char c)
 
 	if (!s || !(arr = (char **)malloc(sizeof(char *) * (words_count(s, c) + 1))))
 		return (NULL);
-	i = 0;
+	i = -1;
 	j = 0;
-	while (i < words_count(s, c))
+	while (++i < words_count(s, c))
 	{
 		while (s[j] == c)
 			j++;
 		arr[i] = find_str(s, c, j);
 		while (s[j] != '\0' && s[j] != c)
 			j++;
-		i++;
 	}
 	arr[i] = NULL;
 	return (arr);
