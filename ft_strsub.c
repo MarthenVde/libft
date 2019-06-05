@@ -23,5 +23,5 @@ char	*ft_strsub(char const *s, unsigned int start, size_t len)
 		return (NULL);
 	while (++i < len)
 		sub[i] = s[start + i];
-	return(sub);
+	return (sub);
 }

@@ -12,13 +12,18 @@
 
 #include "libft.h"
 
-int	ft_atoi(const char *str)
+static	int		check_sign(int sign)
 {
-	long long int ret;
-	long long int is_neg;
-
-	if (str[0] == '\0')
+	if (sign == -1)
 		return (0);
+	return (-1);
+}
+
+int				ft_atoi(const char *str)
+{
+	int ret;
+	int is_neg;
+
 	ret = 0;
 	is_neg = 1;
 	while (*str == 32 || (*str >= 9 && *str <= 13))
@@ -32,7 +37,9 @@ int	ft_atoi(const char *str)
 	while (ft_isdigit(*str))
 	{
 		ret *= 10;
-		ret += (long long int)(*str - '0');
+		if (ret < 0)
+			return (check_sign(is_neg));
+		ret += (int)(*str - '0');
 		str++;
 	}
 	return (ret * is_neg);

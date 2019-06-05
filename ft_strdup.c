@@ -17,7 +17,6 @@ char	*ft_strdup(const char *str)
 	char	*dup;
 	int		count;
 
-	
 	if (!(dup = ft_strnew(ft_strlen(str))))
 		return (NULL);
 	count = 0;

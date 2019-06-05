@@ -12,11 +12,11 @@
 
 #include "libft.h"
 
-static char	*find_str(const char *str, char c, int j)
+static	char	*find_str(const char *str, char c, int j)
 {
-	int len;
-	int i;
-	char *sub_str;
+	int		len;
+	int		i;
+	char	*sub_str;
 
 	len = 0;
 	i = 0;
@@ -31,7 +31,7 @@ static char	*find_str(const char *str, char c, int j)
 	return (sub_str);
 }
 
-static int words_count(const char *str, char c)
+static	int		words_count(const char *str, char c)
 {
 	int count;
 
@@ -48,13 +48,13 @@ static int words_count(const char *str, char c)
 	return (count);
 }
 
-char	**ft_strsplit(char const *s, char c)
+char			**ft_strsplit(char const *s, char c)
 {
-	char **arr;
-	int i;
-	int j;
+	char	**arr;
+	int		i;
+	int		j;
 
-	if (!s || !(arr = (char **)malloc(sizeof(char *) * (words_count(s, c) + 1))))
+	if (!s || !(arr = (char **)malloc(sizeof(*arr) * (words_count(s, c) + 1))))
 		return (NULL);
 	i = -1;
 	j = 0;

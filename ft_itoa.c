@@ -12,7 +12,7 @@
 
 #include "libft.h"
 
-static	int	ft_numlen(int n)
+static	int		ft_numlen(int n)
 {
 	int len;
 
@@ -22,13 +22,13 @@ static	int	ft_numlen(int n)
 	return (len + 1);
 }
 
-char	*ft_itoa(int n)
+char			*ft_itoa(int n)
 {
-	char *ret;
-	int l;
-	int neg;
+	char	*ret;
+	int		l;
+	int		neg;
 
-	neg  = (n < 0);
+	neg = (n < 0);
 	if (n == INT_MIN)
 		return (ft_strdup("-2147483648"));
 	if (neg)
