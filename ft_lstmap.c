@@ -14,16 +14,15 @@
 
 t_list	*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem))
 {
-	t_list *lst2;
-	t_list *curr;
+	t_list *new_lst;
 
-	if (!(curr = (t_list *)malloc(sizeof(t_list))))
-		return (NULL);
-	curr = lst;
-	while (curr)
+	new_lst = NULL;
+	if (lst)
 	{
-		ft_lstadd(&lst2, f(lst));
-		curr = curr->next;
+		if (!(new_lst = (t_list *)malloc(sizeof(t_list))))
+			return (NULL);
+		new_lst = f(lst);
+		new_lst->next = ft_lstmap(lst->next, f);
 	}
-	return (lst2);
+	return (new_lst);
 }

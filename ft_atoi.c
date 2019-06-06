@@ -12,13 +12,6 @@
 
 #include "libft.h"
 
-static	int		check_sign(int sign)
-{
-	if (sign == -1)
-		return (0);
-	return (-1);
-}
-
 int				ft_atoi(const char *str)
 {
 	int ret;
@@ -37,8 +30,6 @@ int				ft_atoi(const char *str)
 	while (ft_isdigit(*str))
 	{
 		ret *= 10;
-		if (ret < 0)
-			return (check_sign(is_neg));
 		ret += (int)(*str - '0');
 		str++;
 	}

@@ -70,8 +70,7 @@ FILES = ft_bzero.c \
 		ft_lstiter.c \
 		ft_lstmap.c
 
-all: a.out $(NAME)
-
+all: $(NAME)
 $(NAME): $(FILES)
 	gcc -c -Wall -Werror -Wextra $(FILES)
 	ar -rc $(NAME) *.o
@@ -81,6 +80,3 @@ clean:
 fclean: clean
 	rm -f libft.a
 re: fclean all
-
-a.out: main.c libft.a
-	gcc main.c libft.a

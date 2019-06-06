@@ -27,7 +27,7 @@ char	*ft_strtrim(char const *s)
 		while (s[end - 1] == ' ' || s[end - 1] == '\t' || s[end - 1] == '\n')
 			end--;
 		if ((end - start) < 0)
-			return ("");
+			return (ft_strdup(""));
 		ts = ft_strsub(s, start, (end - start));
 		return (ts);
 	}

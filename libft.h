@@ -26,7 +26,7 @@ typedef struct		s_list
 }					t_list;
 
 void				ft_bzero(void *s, size_t n);
-int					ft_strlen(const char *str);
+size_t				ft_strlen(const char *str);
 char				*ft_strdup(const char *str);
 int					ft_isprint(int c);
 int					ft_tolower(int c);
