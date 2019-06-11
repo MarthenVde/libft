@@ -37,24 +37,24 @@ t_list	*ft_lstnew(void const *content, size_t content_size)
 	return (node);
 }
 /*
-int	main()
-{
-	char *data;
-
-	data = ft_strdup("hello\n");
-	t_list *test_node;
-	if (!(test_node = ft_lstnew(data,7)))
-		ft_putstr("Could not create list\n");	
-	else
-	{
-		ft_putstr((char*)test_node->content);
-		ft_putnbr((int)test_node->content_size);
-		ft_putchar('\n');
-		if (test_node->next == NULL)
-			ft_putstr("next = NULL\n");
-		else
-			ft_putstr("Error");
-	}
-	return (0);
-}
+**int	main()
+**{
+**	char *data;
+**
+**	data = ft_strdup("hello\n");
+**	t_list *test_node;
+**	if (!(test_node = ft_lstnew(data,7)))
+**		ft_putstr("Could not create list\n");
+**	else
+**	{
+**		ft_putstr((char*)test_node->content);
+**		ft_putnbr((int)test_node->content_size);
+**		ft_putchar('\n');
+**		if (test_node->next == NULL)
+**			ft_putstr("next = NULL\n");
+**		else
+**			ft_putstr("Error");
+**	}
+**	return (0);
+**}
 */
