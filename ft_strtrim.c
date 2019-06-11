@@ -22,9 +22,9 @@ char	*ft_strtrim(char const *s)
 	{
 		start = 0;
 		end = ft_strlen(s);
-		while (s[start] == ' ' || s[start] == '\t' || s[start] == '\n')
+		while (ft_iswhitespace(s[start]))
 			start++;
-		while (s[end - 1] == ' ' || s[end - 1] == '\t' || s[end - 1] == '\n')
+		while (ft_iswhitespace(s[end - 1]))
 			end--;
 		if ((end - start) < 0)
 			return (ft_strdup(""));

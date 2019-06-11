@@ -68,7 +68,8 @@ FILES = ft_bzero.c \
 		ft_lstdel.c \
 		ft_lstadd.c \
 		ft_lstiter.c \
-		ft_lstmap.c
+		ft_lstmap.c \
+		ft_iswhitespace.c
 
 all: $(NAME)
 $(NAME): $(FILES)
