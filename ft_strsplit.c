@@ -31,34 +31,18 @@ static	char	*find_str(const char *str, char c, int j)
 	return (sub_str);
 }
 
-static	int		words_count(const char *str, char c)
-{
-	int count;
-
-	count = 0;
-	while (*str)
-	{
-		while (*str == c)
-			str++;
-		if (*str != '\0')
-			count++;
-		while (*str != '\0' && *str != c)
-			str++;
-	}
-	return (count);
-}
-
 char			**ft_strsplit(char const *s, char c)
 {
 	char	**arr;
 	int		i;
 	int		j;
 
-	if (!s || !(arr = (char **)malloc(sizeof(*arr) * (words_count(s, c) + 1))))
+	if (!s || !(arr = (char **)malloc(sizeof(*arr) *
+			(ft_word_count(s, c) + 1))))
 		return (NULL);
 	i = -1;
 	j = 0;
-	while (++i < words_count(s, c))
+	while (++i < ft_word_count(s, c))
 	{
 		while (s[j] == c)
 			j++;
