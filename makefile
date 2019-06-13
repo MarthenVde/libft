@@ -70,7 +70,10 @@ FILES = ft_bzero.c \
 		ft_lstiter.c \
 		ft_lstmap.c \
 		ft_iswhitespace.c \
-		ft_word_count.c
+		ft_word_count.c \
+		ft_strrev.c \
+		ft_islower.c \
+		ft_isupper.c
 
 all: $(NAME)
 $(NAME): $(FILES)

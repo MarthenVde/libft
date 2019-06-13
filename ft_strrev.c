@@ -1,35 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strnstr.c                                       :+:      :+:    :+:   */
+/*   ft_strrev.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: marvan-d <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/21 12:02:38 by marvan-d          #+#    #+#             */
-/*   Updated: 2019/05/28 16:52:49 by marvan-d         ###   ########.fr       */
+/*   Created: 2019/06/13 12:40:23 by marvan-d          #+#    #+#             */
+/*   Updated: 2019/06/13 12:40:24 by marvan-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
+char	*ft_strrev(char *s)
 {
-	size_t i;
-	size_t j;
+	size_t	i;
+	size_t	len;
+	char	*rev;
 
-	i = 0;
-	if (needle[i] == '\0')
-		return ((char *)haystack);
-	while (haystack[i] != '\0' && i < len)
+	if (s)
 	{
-		j = 0;
-		while (haystack[i + j] == needle[j] && i + j < len)
-		{
-			if (needle[j + 1] == '\0')
-				return ((char *)haystack + i);
-			j++;
-		}
-		i++;
+		i = -1;
+		len = ft_strlen(s);
+		rev = ft_strnew(len);
+		while (len)
+			rev[++i] = s[(len--) - 1];
+		return (rev);
 	}
 	return (NULL);
 }
