@@ -69,11 +69,10 @@ FILES = ft_bzero.c \
 		ft_lstadd.c \
 		ft_lstiter.c \
 		ft_lstmap.c \
+		ft_strnjoin.c \
+		ft_strndup.c \
 		ft_iswhitespace.c \
-		ft_word_count.c \
-		ft_strrev.c \
-		ft_islower.c \
-		ft_isupper.c
+		ft_word_count.c
 
 all: $(NAME)
 $(NAME): $(FILES)

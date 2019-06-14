@@ -25,11 +25,10 @@ typedef struct		s_list
 	struct s_list	*next;
 }					t_list;
 
-int					ft_isupper(int c);
-int					ft_islower(int c);
-char				*ft_strrev(char *s);
-int					ft_word_count(const char *str, char c);
 int					ft_iswhitespace(int c);
+int					ft_word_count(const char *str, char c);
+char				*ft_strndup(const char *str, size_t size);
+char				*ft_strnjoin(char const *s1, char const *s2, size_t len);
 void				ft_bzero(void *s, size_t n);
 size_t				ft_strlen(const char *str);
 char				*ft_strdup(const char *str);

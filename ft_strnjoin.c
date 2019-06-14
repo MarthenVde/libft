@@ -1,40 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*   ft_strnjoin.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: marvan-d <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/21 12:00:49 by marvan-d          #+#    #+#             */
-/*   Updated: 2019/05/21 12:00:52 by marvan-d         ###   ########.fr       */
+/*   Created: 2019/06/14 18:14:02 by marvan-d          #+#    #+#             */
+/*   Updated: 2019/06/14 18:14:04 by marvan-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int				ft_atoi(const char *str)
+char	*ft_strnjoin(char const *s1, char const *s2, size_t len)
 {
-	int ret;
-	int is_neg;
+	char *ret;
 
-	ret = 0;
-	is_neg = 1;
-	while (*str == 32 || (*str >= 9 && *str <= 13))
-		str++;
-	if (*str == '-' || *str == '+')
-	{
-		if (*str == '-')
-			is_neg = -1;
-		str++;
-	}
-	while (ft_isdigit(*str))
-	{
-		ret *= 10;
-		if (ret < 0)
-			if (is_neg == -1)
-				return (0);
-		ret += (int)(*str - '0');
-		str++;
-	}
-	return (ret * is_neg);
+	if (!s1 || !s2 || !(ret = ft_strnew(ft_strlen(s1) + len)))
+		return (NULL);
+	ft_strcpy(ret, s1);
+	ft_strncat(ret, s2, len);
+	return (ret);
 }
