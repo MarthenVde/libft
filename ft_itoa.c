@@ -6,7 +6,7 @@
 /*   By: marvan-d <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/29 14:30:06 by marvan-d          #+#    #+#             */
-/*   Updated: 2019/05/29 14:30:07 by marvan-d         ###   ########.fr       */
+/*   Updated: 2019/06/24 11:41:40 by marvan-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ char			*ft_itoa(int n)
 	int		neg;
 
 	neg = (n < 0);
-	if (n == INT_MIN)
+	if (n == MIN_INT)
 		return (ft_strdup("-2147483648"));
 	if (neg)
 		n *= -1;

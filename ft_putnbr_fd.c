@@ -6,7 +6,7 @@
 /*   By: marvan-d <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/22 14:38:40 by marvan-d          #+#    #+#             */
-/*   Updated: 2019/05/22 14:38:41 by marvan-d         ###   ########.fr       */
+/*   Updated: 2019/06/24 11:41:07 by marvan-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	ft_putnbr_fd(int n, int fd)
 {
-	if (n == INT_MIN)
+	if (n == MIN_INT)
 	{
 		ft_putstr_fd("-2147483648", fd);
 		return ;
