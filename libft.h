@@ -12,7 +12,7 @@
 
 #ifndef LIBFT_H
 # define LIBFT_H
-# define INTEGER_MAX 2147483647
+# define MAX_INT 2147483647
 # define MIN_INT -2147483648
 # include <string.h>
 # include <stdlib.h>
