@@ -25,6 +25,8 @@ typedef struct		s_list
 	struct s_list	*next;
 }					t_list;
 
+int					ft_isupper(int c);			
+int					ft_islower(int c);
 int					ft_iswhitespace(int c);
 int					ft_word_count(const char *str, char c);
 char				*ft_strndup(const char *str, size_t size);
