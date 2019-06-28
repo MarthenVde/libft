@@ -14,6 +14,7 @@
 # define LIBFT_H
 # define MAX_INT 2147483647
 # define MIN_INT -2147483648
+# define BUFF_SIZE 32
 # include <string.h>
 # include <stdlib.h>
 # include <unistd.h>
@@ -25,6 +26,7 @@ typedef struct		s_list
 	struct s_list	*next;
 }					t_list;
 
+int					get_next_line(const int fd, char **line);
 int					ft_isupper(int c);			
 int					ft_islower(int c);
 int					ft_iswhitespace(int c);
