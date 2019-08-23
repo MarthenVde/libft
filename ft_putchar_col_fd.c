@@ -1,26 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putendl_fd.c                                    :+:      :+:    :+:   */
+/*   ft_putchar_col_fd.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marvan-d <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: ctaljaar <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/22 14:34:26 by marvan-d          #+#    #+#             */
-/*   Updated: 2019/05/22 14:34:27 by marvan-d         ###   ########.fr       */
+/*   Created: 2019/06/03 09:54:44 by ctaljaar          #+#    #+#             */
+/*   Updated: 2019/06/03 09:54:45 by ctaljaar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putendl_fd(char const *s, int fd)
+void	ft_putchar_col_fd(char *colour, int c, int fd)
 {
-	if (s)
-	{
-		while (*s)
-		{
-			ft_putchar_fd(*s, fd);
-			s++;
-		}
-		ft_putchar_fd('\n', fd);
-	}
+	ft_putstr_fd(colour, fd);
+	ft_putchar_fd(c, fd);
+	ft_putstr_fd(RESET, fd);
 }

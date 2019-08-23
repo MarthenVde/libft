@@ -1,35 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstnew.c                                        :+:      :+:    :+:   */
+/*   ft_putstr_col_fd.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: marvan-d <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/06/05 12:06:49 by marvan-d          #+#    #+#             */
-/*   Updated: 2019/06/05 12:06:52 by marvan-d         ###   ########.fr       */
+/*   Created: 2019/08/15 18:22:46 by marvan-d          #+#    #+#             */
+/*   Updated: 2019/08/15 18:22:47 by marvan-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_list	*ft_lstnew(void const *content, size_t content_size)
+void	ft_putstr_col_fd(char *colour, char const *s, int fd)
 {
-	t_list	*node;
-
-	if (!(node = (t_list *)malloc(sizeof(t_list))))
-		return (NULL);
-	if (!content)
+	while (*s)
 	{
-		node->content = NULL;
-		node->content_size = 0;
+		ft_putchar_col_fd(colour, *s, fd);
+		s++;
 	}
-	else
-	{
-		if (!(node->content = (void *)malloc(sizeof(*content) * content_size)))
-			return (NULL);
-		ft_memcpy(node->content, content, content_size);
-		node->content_size = content_size;
-	}
-	node->next = NULL;
-	return (node);
 }
